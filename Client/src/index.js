@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom'
-import App from './App'
-import Questionnaire from './App.js'
+import ReactDOM from 'react-dom';
+import App from './app.js';
+import "./index.css";
 
-ReactDOM.render(<Questionnaire />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
