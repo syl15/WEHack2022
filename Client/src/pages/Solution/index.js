@@ -4,10 +4,10 @@ import './styles.css';
 
 function Solution()
 {
-    const q1 = 8; //sidewalks
-    const q2 = 8; //distance DONE
-    const q3 = 8; //public transport DONE
-    const q4 = 8; //safety
+    const q1 = 1; //sidewalks OR people
+    const q2 = 1; //distance OR cargo
+    const q3 = 1; //public transport OR electic
+    const q4 = 1; //safety OR  
     const bool = true;
     var outcome = "outcome";
     var explanation = "explanation";
@@ -34,6 +34,14 @@ function Solution()
             }
         }
     }
+    else{
+        if ( q1>3) outcome = "Minivan";
+        else if (q2>3) outcome = "Truck";
+        else if( q3>3) outcome = "Electric Car";
+        else outcome = "Hybrid";
+    }
+
+
 
     return (
     <div>
