@@ -42,25 +42,7 @@ function Square(props) {
   }
 }
 
-function Choices() {
-  const [q1, setQ1] = useState(0);
-  const [q2, setQ2] = useState(0);
-  const [q3, setQ3] = useState(0); 
-
-  function handleClick(i, q) {
-
-    if (q == 1) { 
-      setQ1(i);
-    }
-
-    else if (q == 2) {
-      setQ2(i);
-    }
-    
-    else {
-      setQ3(i);
-    }   
-  }
+function Choices({q1, q2, q3, handleInput}) {
 
   function renderSquare(i, q, text) {
     var selected;
@@ -75,7 +57,7 @@ function Choices() {
     }
       return(
         <Square
-        onClick = {() => handleClick(i, q)}
+        onClick = {() => handleInput(i, q)}
         display = {text}
         selected = {selected == i? true: false} />
       )
@@ -86,6 +68,12 @@ function Choices() {
     const p3 = 'What type of location do you live in?';
     return (
       <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h3>What mode of transportation is best for me?</h3>
+
         {p1}
         <div className="q1">
           {renderSquare(-5, 1, '$0 to $500')}
