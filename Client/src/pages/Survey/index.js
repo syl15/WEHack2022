@@ -40,6 +40,11 @@ function Square(props) {
     );
   }
 }
+function redirect(props){
+  {
+    window.location.href = "http://localhost:3000/solution";
+  }
+}
 
 class Choices extends React.Component {
   constructor(props) {
@@ -126,6 +131,13 @@ class Choices extends React.Component {
           {this.renderSquare(5, 3, 'rural')}
         </div>
         <br/>
+        <br/>
+        <div className="submit">
+          <button onClick={() => redirect()}>Submit</button>
+        </div>
+
+        
+
       </div>
       </>
     );

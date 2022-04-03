@@ -29,7 +29,7 @@ function Solution()
             }
             else{
                 outcome = "RideShare App"; 
-             explanation = "Considering you need to travel long distances, live in an unsafe area, or have bade sidewalks, we've ruled out walking or biking. You also don't live near a good public transportation system, so you should rely on rideshare, like Uber or Lyft!";
+             explanation = "Considering your monthly budget, miles per week, and location, we suggest using rideshare! ";
 
             }
         }
@@ -44,10 +44,18 @@ function Solution()
 
 
     return (
-    <div>
+    <div className="body">
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <h1>Your "translution" is:</h1>
         <h2> {outcome}  </h2>
         <p> {explanation} </p>
+        
+            <button onclick="window.location.href='https://www.lyft.com/';">
+            Find out More!</button>
+        
 
     </div>
     )
