@@ -8,8 +8,11 @@ ul {
     left: 0;
     width:100%;
     overflow: hidden;
-    background-color:darkseagreen;
+    background-color:white;
     font-weight:bold;
+
+    border-bottom: 1px solid lightgray;
+    background: #EEEEEE50;
   }
   
   li {
@@ -18,15 +21,20 @@ ul {
   
   li a, .dropbtn {
     display: inline-block;
-    color: white;
+    color: green;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
+  }
+
+  li a:hover {
+      color: rgb(2, 68, 2);
   }
     
-  li a:hover, .dropdown:hover .dropbtn {
+  /* li a:hover, .dropdown:hover .dropbtn {
     background-color: darkslategray;
-  }
+  } */
 
   li.dropdown {
       display: inline-block;
