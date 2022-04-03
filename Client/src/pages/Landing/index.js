@@ -6,7 +6,7 @@ function LandingPage() {
     return (
         <div className = {styles.root}>
             
-
+        Start here!
 
         </div>
 
