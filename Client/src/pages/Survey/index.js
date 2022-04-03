@@ -98,7 +98,8 @@ class Choices extends React.Component {
     const q2 = 'How many miles would you need to travel per week?';
     const q3 = 'What type of location do you live in?';
     return (
-      <div style={{ display: 'flex', flexDirection: 'column'}}>
+      <>
+      <div style={{ display: 'flex', flexDirection: 'column', marginTop: 80}}>
         {q1}
         <div className="q1">
           {this.renderSquare(-5, 1, '$0 to $500')}
@@ -127,6 +128,7 @@ class Choices extends React.Component {
         </div>
         <br/>
       </div>
+      </>
     );
   }
 }

@@ -11,7 +11,8 @@ function History() {
     }
 
     return (
-        <div>
+        <>
+        <div style={{ marginTop: 60 }}>
             <h1> Your History</h1>
             <form> 
                 <label for="searchbar">Where do you want to travel?</label><br />
@@ -51,7 +52,7 @@ function History() {
             
         </div>
         
-
+</>
     )
 }
 

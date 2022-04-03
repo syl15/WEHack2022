@@ -6,8 +6,12 @@ import Landing from './pages/Landing';
 import Solution from './pages/Solution';
 import History from './pages/History';
 
+import Navbar from './components/Navbar'
+
 function App() {
     return (
+        <>
+        <Navbar />
         <Router>
             <Routes>
                 <Route path='/' element={<Landing />} />
@@ -16,6 +20,7 @@ function App() {
                 <Route path ='/history' element={<History/>} />
             </Routes>
         </Router>
+        </>
     );
 }
 

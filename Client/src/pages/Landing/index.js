@@ -11,18 +11,6 @@ import wheel from './wheel.png';
 function Landing() {
     return (
         <div className ="landing">
-            <ul>
-            <li><a href="">History</a></li>
-            <li><a href="/survey">Survey</a></li>
-            {/* <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Survey</a>
-                <div class="dropdown-content">
-                <a href="/survey">Take New Survey</a>
-                <a href="">View Old Surveys</a>
-                </div>
-            </li> */}
-            <li><a href="/">Home</a></li>
-            </ul>
             <div id = "main">
                 <img src={car} id="car_img" />
                 <div className = "title">
