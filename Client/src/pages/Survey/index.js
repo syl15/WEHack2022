@@ -1,7 +1,6 @@
 
-import React from 'react';
-import './survey.css';
-import {useState} from 'react';
+import React, { useState } from 'react';
+import './styles.css';
 
 /*
 const Hello = (props) => {
