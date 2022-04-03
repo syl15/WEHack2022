@@ -11,6 +11,7 @@ function Landing() {
             <div className = {styles.body}>
                 {/*  welcome */}
             </div>
+            Hi
         </div>
 
     )

@@ -1,6 +1,6 @@
 .root {
     justify-content: center; 
-    color: white;
+    color: white; 
 }
 
 .title {
@@ -9,7 +9,7 @@
 
 .body{
     justify-content: left; 
-    color: white;
+    color: black;
 }
 
 .image {
