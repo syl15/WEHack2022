@@ -1,6 +1,15 @@
+.main {
+    margin-left: 20px;
+    margin-right: 20px;
+    font: 14px "Century Gothic", Futura, sans-serif;
+
+}
+
 
 table, th, td {
     border: 1px solid black;
+    text-align: center;
 }
+
 
 

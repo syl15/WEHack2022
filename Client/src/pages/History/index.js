@@ -11,8 +11,9 @@ function History() {
     }
 
     return (
-        <>
+        <div className="main">
         <div style={{ marginTop: 60 }}>
+            <br></br>
             <h1> Your History</h1>
             <form> 
                 <label for="searchbar">Where do you want to travel?</label><br />
@@ -27,19 +28,21 @@ function History() {
                 <button onClick={() => addtotable()}>Enter</button><br/>
             
             </form>
+            <br></br>
             <hr></hr>
+            <br></br>
             <table id="myTable">
                 <tr>
                     <td>Location</td>
                     <td>Travel Method</td>
                 </tr>
                 <tr>
-                    <td>7/11 </td>
-                    <td>walked to end of street, then cut through field to get to back of store and walked around</td>
+                    <td> 7/11 </td>
+                    <td> Walked to end of street, then cut through field to get to back of store and walked around</td>
                 </tr>
                 <tr>
-                    <td>Johny's House</td>
-                    <td>biked along forest trail behind house until the river, then turn right and its the 5th house</td>
+                    <td>Johnny's House</td>
+                    <td>Biked along forest trail behind house until the river, then turn right and its the 5th house</td>
                 </tr>
                 {
                     entries.map(entry => (
@@ -52,7 +55,7 @@ function History() {
             
         </div>
         
-</>
+</div>
     )
 }
 
