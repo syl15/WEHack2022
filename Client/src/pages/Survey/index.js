@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './survey.css';
+import './styles.css';
 
 /*
 const Hello = (props) => {

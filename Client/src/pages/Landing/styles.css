@@ -1,19 +1,157 @@
-.root {
-    justify-content: center; 
-    color: white; 
+/* landing class is for the entire page  */
+.landing {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    text-align: left;
+    color:black;
+
+    min-height: 100vh;
+    background: linear-gradient(17deg, rgba(11,176,0,1) 0%, rgba(160,224,156,1) 25%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
+  }
+
+#car_img {
+    width: 250px;
+    display: block;
+    text-align: center;
+    transform: translateY(45px);
+    margin-top: 0px;
 }
 
+@keyframes beetle {
+    from {
+        right: 0px;
+    } to {
+        right: 450px;
+    }
+}
+
+#beetle {
+    width: 80px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    animation: beetle 5s infinite alternate-reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+#wheel {
+    width: 130px;
+    position: absolute;
+    bottom:-70px;
+    left: -40px;
+
+    animation: rotate linear 2s infinite;
+    
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  
 .title {
-    text-align: left;  
-}
-
-.body{
-    justify-content: left; 
-    color: black;
+    margin: 0;
+    text-align: center;
+    font-family: "Century Gothic", Futura, sans-serif;
+    font-weight: normal; 
+    font-size: 40px;
+    margin-top: 5px;
+    
 }
 
 .image {
     display: flex; 
-    justify-content: left; 
+    justify-content: center; 
     opacity: 100%
 }
+
+/* body text  */
+#description {
+    display: block;
+    font-size: 1.25em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    text-align: justify;
+    color:rgb(87, 87, 87);
+    text-indent: 30px;
+    font-weight: 600;
+
+    max-width: 500px;
+
+    background-color: #EEE;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 5px 5px rgba(0,0,0,0.15);
+
+    position: relative;
+}
+
+
+#signature {
+    font-family: 'Segoe Script';
+    font-weight: bold;
+    color: green;
+    text-align: right;
+
+    font-size: 20px;
+}
+
+/*navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    overflow: hidden;
+    background-color:darkseagreen;
+    font-weight:bold;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+    
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: darkslategray;
+  }
+
+  li.dropdown {
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none; 
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index:1;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+
+  .dropdown:hover .dropdown-content {display: block; }
+
+  /* Let user know what page they're on*/
+  .active {
+    background-color: #04AA6D;
+  }
