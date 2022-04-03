@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Survey from './pages/Survey';
 import Landing from './pages/Landing';
 import Solution from './pages/Solution';
+import History from './pages/History';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path='/' element={<Landing />} />
                 <Route path='/survey' element={<Survey />} />
                 <Route path ='/solution' element={<Solution/>} />
+                <Route path ='/history' element={<History/>} />
             </Routes>
         </Router>
     );
