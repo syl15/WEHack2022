@@ -5,8 +5,9 @@ import Survey from './pages/Survey';
 import Landing from './pages/Landing';
 import Solution from './pages/Solution';
 import History from './pages/History';
-
-import Navbar from './components/Navbar'
+import AltSurvey from './pages/AltSurvey';
+import CarSurvey from './pages/CarSurvey';
+import Navbar from './components/Navbar';
 
 function App() {
     const [q1, setQ1] = useState(0);
