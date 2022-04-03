@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './survey.css';
+import {useState} from 'react';
 
 /*
 const Hello = (props) => {
@@ -42,94 +43,80 @@ function Square(props) {
   }
 }
 
-class Choices extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      q1: 0,
-      q2: 0,
-      q3: 0,
-    };
-  }
+function Choices() {
+  const [q1, setQ1] = useState(0);
+  const [q2, setQ2] = useState(0);
+  const [q3, setQ3] = useState(0); 
 
-  handleClick(i, q) {
-    const newState = {...this.state};
+  function handleClick(i, q) {
 
     if (q == 1) { 
-      newState.q1 = i;
-      console.log("clicked" + newState.q1);
+      setQ1(i);
     }
 
     else if (q == 2) {
-      newState.q2 = i;
-      console.log("clicked" + newState.q2);
+      setQ2(i);
     }
     
     else {
-      newState.q3 = i; 
-      console.log("clicked" + newState.q3);
+      setQ3(i);
     }   
-
-    this.setState(newState);
   }
 
-  renderSquare(i, q, text) {
+  function renderSquare(i, q, text) {
     var selected;
     if (q == 1) {
-      selected = this.state.q1;
+      selected = q1;
     }
     else if (q == 2) {
-        selected = this.state.q2; 
+        selected = q2; 
     }
     else {
-      selected = this.state.q3; 
+      selected = q3; 
     }
       return(
         <Square
-        onClick = {() => this.handleClick(i, q)}
+        onClick = {() => handleClick(i, q)}
         display = {text}
         selected = {selected == i? true: false} />
       )
   }
 
-
-  render() {
-    const q1 = 'What is your monthly budget for trasnportation?';
-    const q2 = 'How many miles would you need to travel per week?';
-    const q3 = 'What type of location do you live in?';
+    const p1 = 'What is your monthly budget for trasnportation?';
+    const p2 = 'How many miles would you need to travel per week?';
+    const p3 = 'What type of location do you live in?';
     return (
       <div style={{ display: 'flex', flexDirection: 'column'}}>
-        {q1}
+        {p1}
         <div className="q1">
-          {this.renderSquare(-5, 1, '$0 to $500')}
-          {this.renderSquare(-3, 1, '$500 to $1000')}
-          {this.renderSquare(0, 1, '$1000')}
-          {this.renderSquare(3, 1, '$1001 to $1500')}
-          {this.renderSquare(5, 1, '$1501+')}
+          {renderSquare(-5, 1, '$0 to $500')}
+          {renderSquare(-3, 1, '$500 to $1000')}
+          {renderSquare(0, 1, '$1000')}
+          {renderSquare(3, 1, '$1001 to $1500')}
+          {renderSquare(5, 1, '$1501+')}
         </div>
         <br/>
 
-        {q2}
+        {p2}
         <div className="q2">
-        {this.renderSquare(-5, 2, '< 1 mile')}
-          {this.renderSquare(-3, 2, '1 - 2 miles')}
-          {this.renderSquare(0, 2, '2 - 5 miles')}
-          {this.renderSquare(3, 2, '5 - 10 miles')}
-          {this.renderSquare(5, 2, '10+ miles')}
+        {renderSquare(-5, 2, '< 1 mile')}
+          {renderSquare(-3, 2, '1 - 2 miles')}
+          {renderSquare(0, 2, '2 - 5 miles')}
+          {renderSquare(3, 2, '5 - 10 miles')}
+          {renderSquare(5, 2, '10+ miles')}
         </div>
         <br/>
 
-        {q3}
+        {p3}
         <div className="q3">
-          {this.renderSquare(-5, 3, 'city')}
-          {this.renderSquare(0, 3, 'suburb')}
-          {this.renderSquare(5, 3, 'rural')}
+          {renderSquare(-5, 3, 'city')}
+          {renderSquare(0, 3, 'suburb')}
+          {renderSquare(5, 3, 'rural')}
         </div>
         <br/>
       </div>
     );
   }
-}
 
 // class Questionnaire extends React.Component {
 //   constructor(props) {
