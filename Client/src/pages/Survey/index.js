@@ -25,9 +25,10 @@ const App = () => {    //represents a react component named app
 export default App
 */
 function Square(props) {
+  
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+      {props.display} 
     </button>
   );
 }
@@ -36,24 +37,24 @@ class Choices extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      squares: Array(5).fill(null),
+      squares: Array(5)
     };
   }
 
   handleClick(i) {
     const squares = this.state.squares(); 
-    squares[i] = 'X';
     this.setState({
       squares: squares,
     });
     return;
   }
 
-  renderSquare(i) {
+  renderSquare(i, text) {
     return (
       <Square
-      value = {this.state.squares[i]}
-      onClick={() => this.handleClick(i)}
+      onClick = {() => this.handleClick(i)}
+      display = {text}
+      
       />
     );
   }
@@ -61,11 +62,11 @@ class Choices extends React.Component {
     return (
       <div>
         <div className="choices-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
+          {this.renderSquare(0, 'Strongly disagree')}
+          {this.renderSquare(1, 'Disagree')}
+          {this.renderSquare(2, 'Neutral')}
+          {this.renderSquare(3, 'Agree')}
+          {this.renderSquare(4, 'Strongly agree')}
         </div>
       </div>
     );
@@ -76,18 +77,26 @@ class Questionnaire extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      squares: Array(5).fill(null),
+      squares: Array(5),
+      responses: Array(3).fill(null),
     };
   }
 
   render() {
+    const q1 = 'I bring a lot of things around and need storage space.';
+    const q2 = '\nsecond question\n';
+    const q3 = '\nthird question\n';
+    const q4 = '\nfourth question\n';
     return (
-      <div>
-        I often travel with many items and will need lots of storage space. 
-        <Choices /> 
-        I prefer a mode of transportation that is fast
+
+      <div style={{ display: 'flex', flexDirection: 'column'}}>
+        {q1} 
         <Choices />
-        I prefer a mode of transportation that is reliable
+        {q2}
+        <Choices /> 
+        {q3}
+        <Choices />
+        {q4}
         <Choices />
       </div>
     );

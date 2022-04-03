@@ -1,0 +1,19 @@
+.root {
+    justify-content: center; 
+    color: white; 
+}
+
+.title {
+    text-align: left;  
+}
+
+.body{
+    justify-content: left; 
+    color: black;
+}
+
+.image {
+    display: flex; 
+    justify-content: left; 
+    opacity: 100%
+}
